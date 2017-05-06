@@ -1,0 +1,39 @@
+{
+  "name": "Account",
+  "plural": "accounts",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role_id": {
+      "type": "any",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "posts": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": "account_id"
+    },
+    "voted_posts": {
+      "type": "hasMany",
+      "model": "Post",
+      "foreignKey": "account_id",
+      "through": "UserVote"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

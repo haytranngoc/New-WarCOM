@@ -1,0 +1,39 @@
+{
+  "name": "UserVote",
+  "plural": "user_vote",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "account_id": {
+      "type": "any",
+      "required": true
+    },
+    "post_id": {
+      "type": "any",
+      "required": true
+    },
+    "value": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "account_id"
+    },
+    "post": {
+      "type": "belongsTo",
+      "model": "Post",
+      "foreignKey": "post_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

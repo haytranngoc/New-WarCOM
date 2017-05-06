@@ -1,0 +1,25 @@
+{
+  "name": "Type",
+  "plural": "types",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "posts": {
+      "type": "hasMany",
+      "model": "Type",
+      "foreignKey": "account_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

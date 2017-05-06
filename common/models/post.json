@@ -1,0 +1,54 @@
+{
+  "name": "Post",
+  "plural": "posts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string"
+    },
+    "type_id": {
+      "type": "any",
+      "required": true
+    },
+    "latlng": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string"
+    },
+    "account_id": {
+      "type": "any",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "type": {
+      "type": "belongsTo",
+      "model": "Type",
+      "foreignKey": "type_id"
+    },
+    "account": {
+      "type": "belongsTo",
+      "model": "Account",
+      "foreignKey": "account_id"
+    },
+    "voted_users": {
+      "type": "hasMany",
+      "model": "Account",
+      "foreignKey": "account_id",
+      "through": "UserVote"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

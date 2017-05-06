@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mLab": {
+    "host": "ds133321.mlab.com",
+    "port": 33321,
+    "url": "mongodb://warningcom:warningcom@ds133321.mlab.com:33321/warningcom",
+    "database": "warningcom",
+    "password": "warningcom",
+    "name": "mLab",
+    "user": "warningcom",
+    "connector": "mongodb"
+  }
+}
