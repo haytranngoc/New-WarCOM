@@ -32,6 +32,20 @@
       "model": "Post",
       "foreignKey": "account_id",
       "through": "UserVote"
+    },
+    "roles": {
+      "type": "hasMany",
+      "model": "Role",
+      "foreignKey": "principalId",
+      "through": "RoleMapping"
+    },
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "userId",
+      "options": {
+        "disableInclude": true
+      }
     }
   },
   "acls": [
@@ -42,5 +56,8 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {}
+  "methods": {},
+  "hidden": [
+    "role_name"
+  ]
 }
