@@ -9,15 +9,15 @@
   "properties": {
     "name": {
       "type": "string",
-      "required": true
+      "required": false
     },
-    "role_id": {
-      "type": "any",
+    "role_name": {
+      "type": "string",
       "required": true
     },
     "phone_number": {
       "type": "string",
-      "required": true
+      "required": false
     }
   },
   "validations": [],
