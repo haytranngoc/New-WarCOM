@@ -1,5 +1,9 @@
 {
   "loopback-component-explorer": {
-    "mountPath": "/explorer"
+    "mountPath": "/explorer",
+    "apiInfo": {
+      "title": "WarningCOM",
+      "description": "WarningCOM API Explorer"
+    }
   }
 }
