@@ -1,6 +1,6 @@
 'use strict';
 
-var uploader = require('./api/upload');
+var uploader = require('./api/uploader');
 
 module.exports = function (app) {
 
