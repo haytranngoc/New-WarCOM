@@ -4,13 +4,12 @@
     "connector": "memory"
   },
   "mLab": {
-    "host": "ds133291.mlab.com",
-    "port": 33291,
     "url": "mongodb://warningcom:warningcom@ds133291.mlab.com:33291/warningcom-db",
-    "database": "warningcom",
-    "password": "warningcom",
     "name": "mLab",
-    "user": "warningcom",
-    "connector": "mongodb"
+    "connector": "mongodb",
+    "auto_reconnect": true,
+    "autoReconnect": true,
+    "reconnectTries": 2000,
+    "reconnectInterval": 1000
   }
 }
