@@ -13,7 +13,9 @@ module.exports = function (server) {
       or: [ { name: "admin" }, { name: "user" } ]
     }
   }, function (error, roles) {
-    if (roles.length == 0) {
+    console.error(error);
+    console.log(roles);
+    if (roles && roles.length == 0) {
       async.parallel([
         function (callback) {
           Role.create({ name: "admin" }, function (error, role) {
