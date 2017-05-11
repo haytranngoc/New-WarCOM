@@ -58,6 +58,9 @@
   ],
   "methods": {},
   "hidden": [
-    "role_name"
+    "role_name",
+    "realm",
+    "username",
+    "emailVerified"
   ]
 }
