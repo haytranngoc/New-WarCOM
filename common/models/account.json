@@ -6,6 +6,12 @@
   "options": {
     "validateUpsert": true
   },
+  "hidden": [
+    "role_name",
+    "realm",
+    "username",
+    "emailVerified"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -56,11 +62,5 @@
       "permission": "ALLOW"
     }
   ],
-  "methods": {},
-  "hidden": [
-    "role_name",
-    "realm",
-    "username",
-    "emailVerified"
-  ]
+  "methods": {}
 }

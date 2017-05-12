@@ -28,6 +28,11 @@
     "account_id": {
       "type": "any",
       "required": true
+    },
+    "accepted": {
+      "type": "number",
+      "required": true,
+      "default": 1
     }
   },
   "validations": [],
